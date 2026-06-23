@@ -1,0 +1,86 @@
+Array -
+Array is a collection of elements stored into countiguous Memory location , where elements can be accessed using unique index number.
+
+eg -
+
+const names = []
+
+const cities = new Array()
+
+Transveral ----------------
+
+for ( let i = 0 ;  i < names.length ; i++){
+    console.log(names[i])
+}
+
+for(const array of names){
+    console.log(array)
+}
+
+names.forEach((n , i)=>{
+    console.log(n)
+})
+
+Advance Transversal -----------------
+
+const multiple = names.map((item , index)=>{
+    return item * 2
+}) 
+
+const onlyEven = num.filter((item , index)=>{
+    return item % 2 == 0
+})
+
+const sum = num.reduce((acc , curr)=>{
+    return acc + curr
+},0)
+
+const anyOneEven = num.some((item) => item % 2 == 0 ) // TRUE
+
+const allEven = num.every((item) => item % 2 == 0 ) // FALSE
+
+
+-------------------------------------------------------- examples
+
+const num = [19,20,30,20]
+
+// Find Sum of Elements 
+
+let sum = 0;
+for(const array of num){
+    sum += array
+}
+
+for ( let i = 0 , i < num.length , i++){
+    sum += num[i]
+}
+
+// Find Maximum Element
+
+let max = 0
+
+for ( let i = 0 ; i < num.length ; i++){
+    if(num[i] > max){
+        max = num[i]
+    }
+}
+
+// Search an Element
+
+const  target = "30"
+
+num.forEach((num , i )=>{
+
+    if(num == target){
+        console.log(i)
+    }
+
+})
+
+// Backward Traversal
+
+for(let i = num.length - 1  ; i >= 0 ; i --){
+    console.log(num[i])
+}
+
+
