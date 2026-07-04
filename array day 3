@@ -1,0 +1,41 @@
+// 2 - Pointer Technique for array
+
+const array = [2,4,6,7,8,10,20,50]
+
+// 1. Reverse the given array in place using the two-pointer technique.
+
+function reverseArray(arr){
+    let left = 0
+    let right = arr.length - 1
+    
+    while(left < right){
+        [arr[left] , arr[right]] = [arr[right] , arr[left]]
+        left++
+        right--
+    }
+    
+    console.log(arr)
+}
+
+// 2. Two Sum II - Sorted Array (Easy)
+
+function twoSum(arr , target){
+    let left = 0
+    let right = arr.length - 1
+    
+    while(left < right){
+        
+        let sum = arr[right] + arr[left]
+        
+        if(sum === target) return [arr[left] , arr[right]]
+        
+        if(sum < target){
+            left++
+        }else{
+            right--
+        }
+    }
+    
+    return null
+}
+
