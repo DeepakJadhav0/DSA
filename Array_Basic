@@ -1,0 +1,89 @@
+# Array -
+
+Array is collection of element in contiguous memory locations ,
+array can store multiple types of data
+
+let arr = [1,2,3,4,5]
+
+console.log(arr[3]) // accessing element in array
+
+arr[0] = 10  // modifing element in array
+
+console.log(arr)
+
+console.log(arr.length)  // length of array
+
+# Tranversal in Array
+
+1. for loop in array
+
+for(let i ; i < arr.length ; i++){
+	console.log(arr[9])
+}
+
+2. forEach in array
+
+arr.forEach(item => console.log(item))
+
+3. for...of in array
+
+for(let item of arr){
+	console.log(item)
+}
+
+# Insertion in Array
+
+1. Insertion at begining
+
+arr.push(20)
+
+2. Insertion at End
+
+arr.unshift(90)
+
+3. Insertion at Specific Position 
+
+arr.splice(3,0,10) (index , delete , new )
+
+# Deletion in Array
+
+1. Deletion at Begining
+
+arr.shift() -- time Complixity O(n) because all other element are shifted
+
+2. Deletion at End 
+
+arr.pop()
+
+3. Deletion at Specific Position
+
+arr.splice(3,0)
+
+Questions ------------------------
+
+let arr = [10, 20, 30, 40, 50];
+
+//Q Insert 5 at the beginning of the array. 
+ arr.unshift(5)
+
+//Q Insert 60 at the end of the array.
+ arr.push(60)
+
+//Q Delete the first element of the array.
+ arr.shift()
+
+//Q Delete the last element of the array.
+ arr.pop()
+
+//Q Insert 25 at index 2 using splice().
+ arr.splice(2,0,25)
+
+//Q Delete the element at index 3 using splice().
+ arr.splice(3,1)
+
+//Q Insert 35 at index 3 without deleting any existing element.
+ arr.splice(3,0,35)
+
+//Q Delete 2 elements starting from index 1 using splice().
+ arr.splice(0,2)
+
