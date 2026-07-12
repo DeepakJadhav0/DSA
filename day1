@@ -1,0 +1,55 @@
+Recursion is a programming technique in which a function calls itself to solve a problem by breaking it into smaller subproblems.
+
+// Print numbers from N down to 1 using recursion.
+
+function decCount(n){
+    
+    if(n == 1) return 1
+
+    console.log(n)
+    
+    return decCount(n -1)
+}
+
+// Print Numbers from 1 to N
+
+function incCount(m){
+    
+    if(m == 1){
+        console.log(1)
+        return;
+    }
+    
+    incCount(m - 1)
+    
+    console.log(m)
+    
+}
+
+// Find Factorial of a Number
+
+function factorial(f){
+    
+    if(f == 1) return 1
+    
+    return f * factorial(f - 1)
+}
+
+// Find Sum of First N Natural Numbers
+
+function sumOfN(n){
+    if(n ==1 ) return 1
+    
+    return n + sumOfN(n - 1)
+}
+
+// Find the Nth Fibonacci Number
+
+function fibonacciSeries(n){
+    
+    if(n == 0 ) return 0
+    if(n == 1) return 1
+    
+    return fibonacciSeries(n - 1) + fibonacciSeries(n - 2)
+}
+
