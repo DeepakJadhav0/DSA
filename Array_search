@@ -1,0 +1,39 @@
+# Array Searching 
+
+Array is operation for finding index of given element
+
+1. Linear Search
+
+function linearSearch(arr , target){
+	for(let i = 0 ; i < arr.length ; i++){
+		if(arr[i] === target) return i	
+	}
+	return -1
+}
+
+time Complexity - O(n)
+
+2. Binary Search 
+
+function linarySearch(arr , target){
+
+	let left = 0
+	let right = arr.lenght - 1
+
+	while(left<right){
+		let mid = Math.floor((left + right) / 2 )
+
+		if(mid == terget) return mid
+	
+		if(target > mid){
+			left = mid + 1
+		}else{
+			right = mid - 1
+		}
+	}
+
+	return -1
+}
+
+Time Complexity - O(log n)
+			
